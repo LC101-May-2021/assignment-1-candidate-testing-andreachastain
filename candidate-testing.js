@@ -6,9 +6,9 @@ const input = require('readline-sync');
 let candidateName = "";
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "Who was the first American woman in space?";
+let correctAnswer= "Sally Ride";
+let candidateAnswer= "";
 let questions;
 let correctAnswers;
 let candidateAnswers;
@@ -21,8 +21,13 @@ function askForName() {
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
-
+    candidateAnswer = input.question("Who was the first American woman in space? ");
+  
+   if (candidateAnswer === "Sally Ride"){
+     console.log("You are a star!");
+   } else {
+     console.log("Sorry that is not correct. Keeping reaching for the stars!");
+   }
 }
 
 function gradeQuiz(candidateAnswers) {
